@@ -6,7 +6,7 @@ const Home: React.FC<HomeProps> = ({}) => {
   return (
     <div className={styles.home}>
       <h1 className={styles.title}>그림</h1>
-      <form action=''>
+      <form onSubmit={() => {}} className={styles.form}>
         <svg
           className={styles.searchIcon}
           fill='none'
@@ -21,7 +21,14 @@ const Home: React.FC<HomeProps> = ({}) => {
             d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z'
           ></path>
         </svg>
-        <input type='search' name='nim' id='nim' />
+        <input
+          className={styles.search}
+          type='search'
+          name='search'
+          id='search'
+          placeholder='Find by NIM'
+          maxLength={8}
+        />
       </form>
     </div>
   );

@@ -1,2 +1,40 @@
 .home {
+  margin-top: 6rem;
+  .title {
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 72px;
+    text-align: center;
+    color: var(--title);
+  }
+
+  .form {
+    position: relative;
+    height: fit-content;
+    .search {
+      width: 279px;
+      background: var(--input-background);
+      border-radius: 24px;
+      border: none;
+      padding: 12px 24px;
+      padding-left: 60px;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+      color: var(--input-active);
+
+      &::placeholder {
+        color: #97979d;
+      }
+    }
+
+    .searchIcon {
+      width: 24;
+      height: 24px;
+      stroke: var(--input-text);
+      position: absolute;
+      top: 12px;
+      left: 24px;
+    }
+  }
 }
