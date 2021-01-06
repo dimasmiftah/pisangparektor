@@ -1,0 +1,49 @@
+.result {
+  width: auto;
+  border: 1px solid black;
+  display: grid;
+  row-gap: 2rem;
+  flex-direction: column;
+  .picture {
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+  .caption {
+    display: grid;
+    row-gap: 1rem;
+    .nim {
+      font-weight: bold;
+      font-size: 36px;
+      color: var(--title);
+      margin: 0;
+    }
+    .label {
+      font-weight: 500;
+      font-size: 16px;
+      color: var(--label);
+      text-transform: uppercase;
+    }
+    .info {
+      font-weight: 500;
+      font-size: 20px;
+      color: var(--title);
+      text-transform: capitalize;
+    }
+  }
+  .button {
+    width: 100%;
+    background: var(--title);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 24px;
+    color: var(--background);
+    font-size: 18px;
+    .backIcon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
