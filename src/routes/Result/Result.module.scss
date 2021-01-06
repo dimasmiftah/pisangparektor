@@ -33,7 +33,7 @@
         display: grid;
         row-gap: 1.5rem;
         .label {
-          font-weight: 400;
+          font-weight: 500;
           font-size: 16px;
           color: var(--label);
           text-transform: uppercase;
@@ -57,6 +57,13 @@
       display: flex;
       align-items: center;
       text-transform: capitalize;
+
+      &:hover {
+        .backIcon {
+          margin-left: -0.5rem;
+          transition: 0.4s;
+        }
+      }
       .backIcon {
         margin-right: 1rem;
         width: 24px;
