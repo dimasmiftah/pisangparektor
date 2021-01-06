@@ -5,7 +5,7 @@ interface HomeProps {}
 const Home: React.FC<HomeProps> = ({}) => {
   return (
     <div className={styles.home}>
-      <h1 className={styles.title}>그림</h1>
+      <h1 className={styles.title}>사진</h1>
       <form onSubmit={() => {}} className={styles.form}>
         <svg
           className={styles.searchIcon}
