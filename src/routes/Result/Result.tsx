@@ -1,20 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
 import styles from './Result.module.scss';
 
 interface ResultProps {}
 
 const Result: React.FC<ResultProps> = ({}) => {
+  const location = useLocation();
+  const history = useHistory();
+  const imgRef = useRef<HTMLImageElement>(null);
+  const student = location.state;
+
+  const handleClick = () => {
+    history.push('/');
+  };
+
+  // const blobToImage = (blob: string):string => {
+  // return URL.revokeObjectURL(blob)
+  // };
   return (
     <div className={styles.result}>
       <div className={styles.card}>
         <div className={styles.picture}>
           <img
-            src='https://akademik.unikom.ac.id/foto/10118244.jpg'
-            alt='10118244'
+            ref={imgRef}
+            src={`https://akademik.unikom.ac.id/foto/${student}.jpg`}
+            alt={`${student}`}
           />
         </div>
         <div className={styles.caption}>
-          <h1 className={styles.nim}>#10118244</h1>
+          <h1 className={styles.nim}>#{student}</h1>
           <div className={styles.meta}>
             <div>
               <div className={styles.label}>major</div>
@@ -26,7 +40,7 @@ const Result: React.FC<ResultProps> = ({}) => {
             </div>
           </div>
         </div>
-        <button className={styles.button}>
+        <button onClick={handleClick} className={styles.button}>
           <svg
             className={styles.backIcon}
             fill='none'
