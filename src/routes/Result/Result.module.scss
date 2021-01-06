@@ -27,7 +27,8 @@
         font-weight: 700;
         font-size: 36px;
         color: var(--title);
-        margin: 0;
+        border-bottom: 2.5px solid var(--title);
+        width: fit-content;
       }
       .meta {
         display: grid;
