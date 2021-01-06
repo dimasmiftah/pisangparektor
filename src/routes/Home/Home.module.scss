@@ -1,5 +1,5 @@
 .home {
-  margin-top: 6rem;
+  padding: 6rem 3rem;
   .title {
     font-weight: 900;
     font-size: 48px;
@@ -7,16 +7,15 @@
     text-align: center;
     color: var(--title);
   }
-
   .form {
+    margin-top: 1.5rem;
     position: relative;
     height: fit-content;
     .search {
-      width: 279px;
       background: var(--input-background);
       border-radius: 24px;
       border: none;
-      padding: 12px 24px;
+      padding: 12px 0;
       padding-left: 60px;
       font-weight: normal;
       font-size: 18px;

@@ -1,10 +1,14 @@
 .result {
-  width: auto;
   border: 1px solid black;
-  display: grid;
+  width: 80vw;
+  display: flex;
+  grid-auto-columns: auto;
+  justify-content: center;
   row-gap: 2rem;
   flex-direction: column;
   .picture {
+    width: 100%;
+    border: 1px solid red;
     img {
       width: 200px;
       height: 200px;
@@ -14,6 +18,8 @@
   .caption {
     display: grid;
     row-gap: 1rem;
+    width: 100%;
+    border: 1px solid red;
     .nim {
       font-weight: bold;
       font-size: 36px;
@@ -35,6 +41,7 @@
   }
   .button {
     width: 100%;
+    border: 1px solid red;
     background: var(--title);
     border: none;
     padding: 12px 24px;
