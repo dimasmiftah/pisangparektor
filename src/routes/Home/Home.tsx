@@ -63,7 +63,7 @@ const Home: React.FC<HomeProps> = ({}) => {
           value={search}
         />
       </form>
-      {notFound && <h3>Not found!</h3>}
+      {notFound && <h2 className={styles.notfound}>Sorry, not found 😞</h2>}
     </div>
   );
 };

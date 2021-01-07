@@ -7,22 +7,17 @@ interface ResultProps {}
 const Result: React.FC<ResultProps> = ({}) => {
   const location = useLocation();
   const history = useHistory();
-  const imgRef = useRef<HTMLImageElement>(null);
   const student = location.state;
 
   const handleClick = () => {
     history.push('/');
   };
 
-  // const blobToImage = (blob: string):string => {
-  // return URL.revokeObjectURL(blob)
-  // };
   return (
     <div className={styles.result}>
       <div className={styles.card}>
         <div className={styles.picture}>
           <img
-            ref={imgRef}
             src={`https://akademik.unikom.ac.id/foto/${student}.jpg`}
             alt={`${student}`}
           />
