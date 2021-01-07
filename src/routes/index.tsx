@@ -8,7 +8,7 @@ const Result = lazy(() => import('./Result/Result'));
 const SuspenseFallback = (
   <div
     style={{
-      marginTop: '4rem',
+      height: '100vh',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',

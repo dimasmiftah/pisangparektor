@@ -1,15 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './Home.module.scss';
-import Loader from 'react-loader-spinner';
 import { useHistory } from 'react-router-dom';
 
 interface HomeProps {}
 
 const Home: React.FC<HomeProps> = ({}) => {
-  const [search, setSearch] = useState<string>('');
-  const [loading, setLoading] = useState<boolean>(false);
+  const [search, setSearch] = useState('');
   const [notFound, setNotFound] = useState(false);
   const history = useHistory();
+  const searchInput = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const pattern = /^[0-9\b]+$/;
@@ -33,6 +32,10 @@ const Home: React.FC<HomeProps> = ({}) => {
     image.src = `https://akademik.unikom.ac.id/foto/${search}.jpg`;
   };
 
+  useEffect(() => {
+    searchInput.current!.focus();
+  }, []);
+
   return (
     <div className={styles.home}>
       <h1 className={styles.title}>사진</h1>
@@ -52,6 +55,7 @@ const Home: React.FC<HomeProps> = ({}) => {
           ></path>
         </svg>
         <input
+          ref={searchInput}
           className={styles.search}
           type='search'
           name='search'
