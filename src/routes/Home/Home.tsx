@@ -20,7 +20,7 @@ const Home: React.FC<HomeProps> = ({}) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-
+    setNotFound(false);
     let image = new Image();
     image.onload = () => {
       if (image.width > 0) {
