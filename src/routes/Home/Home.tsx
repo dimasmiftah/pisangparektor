@@ -8,6 +8,7 @@ interface HomeProps {}
 const Home: React.FC<HomeProps> = ({}) => {
   const [search, setSearch] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
+  const [notFound, setNotFound] = useState(false);
   const history = useHistory();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -16,35 +17,24 @@ const Home: React.FC<HomeProps> = ({}) => {
       setSearch(e.target.value);
     }
   };
-  const imageExists = (image_url: string) => {
-    var http = new XMLHttpRequest();
 
-    http.open('HEAD', image_url, false);
-    http.send();
-
-    return http.status != 404;
-  };
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
-    setLoading(true);
-    // if (imageExists(`https://akademik.unikom.ac.id/foto/${search}.jpg`)) {
-    //   history.push('/result', search);
-    //   setLoading(false);
-    // }
-    fetch(`https://akademik.unikom.ac.id/foto/${search}.jpg`, {
-      mode: 'no-cors',
-    }).then((res) => {
-      console.log(res);
-      history.push('/result', search);
-      setLoading(false);
-    });
+
+    let image = new Image();
+    image.onload = () => {
+      if (image.width > 0) {
+        history.push('/result', search);
+      }
+    };
+    image.onerror = () => {
+      setNotFound(true);
+    };
+    image.src = `https://akademik.unikom.ac.id/foto/${search}.jpg`;
   };
 
   return (
     <div className={styles.home}>
-      {/* {loading && (
-        <Loader type='ThreeDots' color='#00BFFF' height={80} width={80} />
-      )} */}
       <h1 className={styles.title}>사진</h1>
       <form onSubmit={handleSubmit} className={styles.form}>
         <svg
@@ -73,6 +63,7 @@ const Home: React.FC<HomeProps> = ({}) => {
           value={search}
         />
       </form>
+      {notFound && <h3>Not found!</h3>}
     </div>
   );
 };
