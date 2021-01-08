@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 import styles from './Result.module.scss';
+import { majors } from '../../data/majors';
 
 interface ResultProps {}
 
@@ -8,6 +9,8 @@ const Result: React.FC<ResultProps> = ({}) => {
   const location = useLocation();
   const history = useHistory();
   const student = location.state;
+  const majorID: any = String(student).substring(0, 3);
+  const yearOfEntry: any = String(student).substring(3, 5);
 
   const handleClick = () => {
     history.push('/');
@@ -27,11 +30,11 @@ const Result: React.FC<ResultProps> = ({}) => {
           <div className={styles.meta}>
             <div>
               <div className={styles.label}>major</div>
-              <div className={styles.info}>teknik informatika</div>
+              <div className={styles.info}>{majors[majorID].name}</div>
             </div>
             <div>
               <div className={styles.label}>year of entry</div>
-              <div className={styles.info}>2018</div>
+              <div className={styles.info}>{`20${yearOfEntry}`}</div>
             </div>
           </div>
         </div>
