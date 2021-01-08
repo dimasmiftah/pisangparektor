@@ -1,10 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './Home.module.scss';
 import { useHistory } from 'react-router-dom';
+import styles from './Home.module.scss';
 
-interface HomeProps {}
-
-const Home: React.FC<HomeProps> = ({}) => {
+const Home: React.FC = () => {
   const [search, setSearch] = useState('');
   const [notFound, setNotFound] = useState(false);
   const history = useHistory();

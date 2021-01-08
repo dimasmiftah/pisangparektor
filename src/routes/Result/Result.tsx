@@ -1,11 +1,8 @@
-import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import styles from './Result.module.scss';
 import { majors } from '../../data/majors';
+import styles from './Result.module.scss';
 
-interface ResultProps {}
-
-const Result: React.FC<ResultProps> = ({}) => {
+const Result: React.FC = () => {
   const location = useLocation();
   const history = useHistory();
   const student = location.state;
