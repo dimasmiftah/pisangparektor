@@ -15,11 +15,11 @@
     "name": "Teknik Industri",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
-  "101": {
+  "131": {
     "name": "Teknik Elektro",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
-  "101": {
+  "130": {
     "name": "Teknik Sipil",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
@@ -27,7 +27,7 @@
     "name": "Teknik Arsitektur",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
-  "101": {
+  "106": {
     "name": "Teknik Perencanaan Wilayah &amp; Kota",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
@@ -43,19 +43,23 @@
     "name": "Komputerisasi Akuntansi",
     "departmen": "Teknik &amp; Ilmu Komputer"
   },
-  "434/211": {
+  "211": {
     "name": "Akuntansi",
     "departmen": "Ekonomi &amp; Bisnis"
   },
-  "212/211": {
+  "213": {
+    "name": "Akuntansi",
+    "departmen": "Ekonomi &amp; Bisnis"
+  },
+  "212": {
     "name": "Manajemen",
     "departmen": "Ekonomi &amp; Bisnis"
   },
-  "101": {
+  "214": {
     "name": "Manajemen Pemasaran",
     "departmen": "Ekonomi &amp; Bisnis"
   },
-  "215/221": {
+  "215": {
     "name": "Keuangan &amp; Perbankan",
     "departmen": "Ekonomi &amp; Bisnis"
   },
@@ -63,7 +67,7 @@
     "name": "Ilmu Komunikasi",
     "departmen": "Ilmu Sosial &amp; Ilmu Politik"
   },
-  "101": {
+  "417": {
     "name": "Ilmu Pemerintahan",
     "departmen": "Ilmu Sosial &amp; Ilmu Politik"
   },
@@ -71,7 +75,7 @@
     "name": "Ilmu Hubungan Internasional",
     "departmen": "Ilmu Sosial &amp; Ilmu Politik"
   },
-  "101": {
+  "316": {
     "name": "Ilmu Hukum",
     "departmen": "Hukum"
   },
@@ -79,15 +83,15 @@
     "name": "Desain Komunikasi Visual",
     "departmen": "Desain"
   },
-  "101": {
+  "520": {
     "name": "Desain Interior",
     "departmen": "Desain"
   },
-  "101": {
+  "637": {
     "name": "Sastra Inggris",
     "departmen": "Sastra"
   },
-  "101": {
+  "638": {
     "name": "Sastra Jepang",
     "departmen": "Sastra"
   }
