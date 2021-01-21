@@ -116,7 +116,6 @@
 @media screen and (min-width: 540px) {
   .result {
     .card {
-      row-gap: 3rem;
       .picture {
         img {
           width: 260px;
@@ -128,7 +127,6 @@
           font-size: 40px;
         }
         .meta {
-          row-gap: 2rem;
           .label {
             font-size: 20px;
           }
