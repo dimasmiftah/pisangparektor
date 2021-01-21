@@ -4,10 +4,10 @@
   /* Color styles */
   --background: white;
   --title: black;
-  --input-background: rgba(0, 0, 0, 0.05);
-  --input-text: rgba(151, 151, 157, 1);
+  --input-background: #f2f2f2;
+  --input-text: rgb(151, 151, 157);
   --input-active: rgb(99, 99, 99);
-  --label: rgba(127, 127, 133, 1);
+  --label: rgb(127, 127, 133);
 }
 
 body {
