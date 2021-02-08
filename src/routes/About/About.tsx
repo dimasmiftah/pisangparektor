@@ -56,16 +56,16 @@ const About: React.FC<AboutProps> = () => {
           ]}
           animationSpeed={1000}
         >
-          <img src={imageOne} />
-          <img src={imageTwo} />
-          <img src={imageThree} />
-          <img src={imageFour} />
-          <img src={imageFive} />
-          <img src={imageSix} />
-          <img src={imageSeven} />
-          <img src={imageEight} />
-          <img src={imageNine} />
-          <img src={imageTen} />
+          <img src={imageOne} alt='ImageOne' />
+          <img src={imageTwo} alt='imageTwo' />
+          <img src={imageThree} alt='imageThree' />
+          <img src={imageFour} alt='imageFour' />
+          <img src={imageFive} alt='imageFive' />
+          <img src={imageSix} alt='imageSix' />
+          <img src={imageSeven} alt='imageSeven' />
+          <img src={imageEight} alt='imageEight' />
+          <img src={imageNine} alt='imageNine' />
+          <img src={imageTen} alt='imageTen' />
         </Carousel>
         <p className={styles.desc}>Swipe to see more {`>`}</p>
       </div>
