@@ -1,0 +1,50 @@
+.about {
+  padding: 6rem 3rem;
+  max-width: 360px;
+  margin: 0 auto;
+  display: grid;
+  row-gap: 2rem;
+  .title {
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+    color: var(--title);
+    text-decoration: none;
+  }
+  .section {
+    display: grid;
+    row-gap: 1rem;
+    .subtitle {
+      font-weight: bold;
+      font-size: 26px;
+      color: var(--title);
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .desc {
+      font-weight: 500;
+      text-align: justify;
+      color: var(--label);
+      line-height: 1.5;
+    }
+  }
+  .carousel {
+    border: 1px solid red;
+  }
+}
+
+@media screen and (min-width: 411px) {
+  .about {
+    .title {
+      font-size: 54px;
+    }
+  }
+}
+
+@media screen and (min-width: 540px) {
+  .about {
+    .title {
+      font-size: 60px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import styles from './Home.module.scss';
 
 const Home: React.FC = () => {
@@ -36,7 +36,9 @@ const Home: React.FC = () => {
 
   return (
     <div className={styles.home}>
-      <h1 className={styles.title}>사진</h1>
+      <Link className={styles.title} to='/'>
+        <h1>사진</h1>
+      </Link>
       <form onSubmit={handleSubmit} className={styles.form}>
         <svg
           className={styles.searchIcon}
@@ -66,6 +68,9 @@ const Home: React.FC = () => {
         />
       </form>
       {notFound && <h2 className={styles.notfound}>Sorry, not found 😞</h2>}
+      <h2 onClick={() => history.push('/about')} className={styles.about}>
+        About
+      </h2>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner';
 
 const Home = lazy(() => import('./Home/Home'));
 const Result = lazy(() => import('./Result/Result'));
+const About = lazy(() => import('./About/About'));
 
 const SuspenseFallback = (
   <div
@@ -24,6 +25,7 @@ const Routes = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route path='/result' component={Result} />
+        <Route path='/about' component={About} />
       </Switch>
     </Suspense>
   </Router>
